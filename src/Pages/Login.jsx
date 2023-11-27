@@ -24,7 +24,7 @@ const Login = () => {
       setUser("")
       setPwd("")
       navigate("/home")
-    } catch (error) {
+    } catch (err) {
       if(!err?.response){
         setErrMsg("No Server Response")
       } else if (err.response?.status === 400){

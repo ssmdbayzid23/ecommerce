@@ -4,14 +4,22 @@ import { useContext } from 'react';
 import { ThemeContext } from './Hooks/ThemeContext';
 import Login from './Pages/Login';
 import Header from './component/Header';
+import {Routes, Route}  from 'react-router-dom'
+import Home from './Pages/Home';
+
 
 function App() {
 
+
+  
   return (
-    <div className='body'>
+    <div>
       <Header />
+    <Routes>
+      <Route path='/' element={< Home />}/> 
+      <Route path='/login' element={< Login />}/> 
       
-      <Login />
+    </Routes>
     </div>
   );
 }
